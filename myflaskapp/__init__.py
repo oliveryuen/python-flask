@@ -1,5 +1,6 @@
 from dynaconf import FlaskDynaconf
 from flask import Flask
+from healthcheck import HealthCheck, EnvironmentDump
 
 
 def register_blueprints(app):
@@ -10,6 +11,8 @@ def register_blueprints(app):
 def create_app():
     app = Flask(__name__)
     FlaskDynaconf(app)
+    HealthCheck(app, "/healthcheck")
+    EnvironmentDump(app, "/environment")
     register_blueprints(app)
     return app
 

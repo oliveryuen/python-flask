@@ -1,0 +1,24 @@
+[default]
+APP_NAME = "My Flask App"
+ENV = "default"
+
+[development]
+ENV = "development"
+DEBUG = true
+TESTING = false
+
+[testing]
+ENV = "testing"
+DEBUG = true
+TESTING = true
+
+[staging]
+ENV = "staging"
+DEBUG = false
+TESTING = false
+
+[production]
+ENV = "production"
+DEBUG = false
+TESTING = false
+

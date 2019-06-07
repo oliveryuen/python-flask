@@ -1,0 +1,22 @@
+version: '3'
+services:
+    myflaskapp:
+        build: .
+        image: myflaskapp:latest
+        networks:
+            - nginx_network
+    nginx:
+        restart: always
+        image: nginx:latest
+        ports:
+            - 8000:80
+        volumes:
+            - ./config/nginx/conf.d:/etc/nginx/conf.d
+        depends_on:
+            - myflaskapp
+        networks:
+            - nginx_network
+networks:
+    nginx_network:
+        driver: bridge
+

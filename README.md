@@ -6,3 +6,7 @@ Python Flask App
 gunicorn wsgi
 ```
 
+# Docker
+```shell
+docker-compose up
+```

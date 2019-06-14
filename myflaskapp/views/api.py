@@ -1,8 +1,9 @@
 from flask import Blueprint
-from flask_restplus import Api, Resource
+from flask_restplus import Resource
+from .my_api import MyApi
 
 api_blueprint = Blueprint('api', __name__)
-api = Api(api_blueprint, doc="/doc")
+api = MyApi(api_blueprint, doc="/doc")
 
 
 @api.route("/hello")

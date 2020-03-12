@@ -12,6 +12,10 @@ INSTALL_DEPENDENCIES = [
     'healthcheck'
 ]
 
+TEST_DEPENDENCIES = [
+    'pytest'
+]
+
 setup(
     name='myflaskapp',
     version='0.0.1',
@@ -20,6 +24,11 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/oliveryuen/python-flask',
     author='Oliver Yuen',
+    install_requires=INSTALL_DEPENDENCIES,
+    tests_require=TEST_DEPENDENCIES,
+    test_suite='tests',
+    packages=find_packages("src"),
+    package_dir={"": "src"},
     classifiers=[
         # How mature is this project?
         # 3 - Alpha
@@ -27,8 +36,8 @@ setup(
         # 5 - Production/Stable
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'Programming Language :: Python :: 3.7'
-    ],
-    install_requires=INSTALL_DEPENDENCIES
+        'Programming Language :: Python :: 3.7',
+        'License :: Apache',
+        'Operating System :: OS Independent'
+    ]
 )
-

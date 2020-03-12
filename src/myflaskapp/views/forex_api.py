@@ -16,6 +16,9 @@ API = MyApi(FOREX_API_BLUEPRINT,
 
 @API.route("/rates/usd")
 class USDRate(Resource):
+    """
+    USD Rate
+    """
 
     @classmethod
     def get(cls):

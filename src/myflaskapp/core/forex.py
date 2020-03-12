@@ -10,5 +10,5 @@ def get_usd_rate():
     Get list of USD/* rates
     :return: list of USD/* rates
     """
-    return CR.get_rates('USD')
 
+    return CR.get_rates('USD')

@@ -4,7 +4,7 @@ python:
 install:
     - pip install -r requirements/build-requirements.txt
 script:
-    - pytest --cov=myflaskapp/
+    - pytest --cov=myflaskapp
 after_success:
     - coveralls
 notifications:

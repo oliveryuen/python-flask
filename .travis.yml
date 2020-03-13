@@ -3,7 +3,7 @@ python:
     - "3.7"
 install:
     - pip install -r requirements/build-requirements.txt
-    - pip instal -e .
+    - pip install -e .
 script:
     - pytest --cov=myflaskapp
 after_success:

@@ -1,3 +1,4 @@
+"""Test health check"""
 
 
 def test_healthcheck(client):

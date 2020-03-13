@@ -1,3 +1,5 @@
+"""Test Forex API"""
+
 
 def test_forex_api_doc(client):
     response = client.get("/api/forex/doc")
